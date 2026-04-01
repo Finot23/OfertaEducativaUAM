@@ -1,58 +1,82 @@
 package com.example.ofertaeducativauam.ui.theme
 
-import android.app.Activity
-import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.dynamicDarkColorScheme
-import androidx.compose.material3.dynamicLightColorScheme
-import androidx.compose.material3.lightColorScheme
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.sp
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = UamOrangeDark,
+    secondary = UamGreyLight,
+    background = Color(0xFF121212),
+    surface = Color(0xFF1E1E1E),
+    onPrimary = Color.Black,
+    onBackground = Color.White,
+    onSurface = Color.White
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
-
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
+    primary = UamOrange,
     onPrimary = Color.White,
+    primaryContainer = UamOrange.copy(alpha = 0.1f),
+    secondary = UamGrey,
     onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+    background = UamBone,
+    onBackground = UamBlack,
+    surface = UamWhite,
+    onSurface = UamBlack,
+    surfaceVariant = Color(0xFFE0E0E0)
+)
+
+private val HighContrastLightSelection = lightColorScheme(
+    primary = Color.Black,
+    onPrimary = Color.White,
+    background = Color.White,
+    onBackground = Color.Black,
+    surface = Color.White,
+    onSurface = Color.Black,
+    outline = Color.Black
+)
+
+private val HighContrastDarkSelection = darkColorScheme(
+    primary = Color.White,
+    onPrimary = Color.Black,
+    background = Color.Black,
+    onBackground = Color.White,
+    surface = Color.Black,
+    onSurface = Color.White,
+    outline = Color.White
 )
 
 @Composable
 fun OfertaEducativaUAMTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    isHighContrast: Boolean = false,
+    lineSpacingExtra: Float = 0f,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
-        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-            val context = LocalContext.current
-            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
-        }
-
+        isHighContrast && darkTheme -> HighContrastDarkSelection
+        isHighContrast && !darkTheme -> HighContrastLightSelection
         darkTheme -> DarkColorScheme
         else -> LightColorScheme
     }
 
+    // Aplicar espaciado dinámico a los estilos principales
+    val dynamicTypography = Typography.copy(
+        bodyLarge = Typography.bodyLarge.copy(lineHeight = (Typography.bodyLarge.lineHeight.value + lineSpacingExtra).sp),
+        bodyMedium = Typography.bodyMedium.copy(lineHeight = (Typography.bodyMedium.lineHeight.value + lineSpacingExtra).sp),
+        bodySmall = Typography.bodySmall.copy(lineHeight = (Typography.bodySmall.lineHeight.value + lineSpacingExtra).sp),
+        headlineLarge = Typography.headlineLarge.copy(lineHeight = (Typography.headlineLarge.lineHeight.value + lineSpacingExtra).sp),
+        headlineMedium = Typography.headlineMedium.copy(lineHeight = (Typography.headlineMedium.lineHeight.value + lineSpacingExtra).sp),
+        titleLarge = Typography.titleLarge.copy(lineHeight = (Typography.titleLarge.lineHeight.value + lineSpacingExtra).sp),
+        titleMedium = Typography.titleMedium.copy(lineHeight = (Typography.titleMedium.lineHeight.value + lineSpacingExtra).sp)
+    )
+
     MaterialTheme(
         colorScheme = colorScheme,
-        typography = Typography,
+        typography = dynamicTypography,
         content = content
     )
 }
