@@ -128,13 +128,13 @@ class MainActivity : ComponentActivity() {
                             topBar = {
                                 CenterAlignedTopAppBar(
                                     title = { 
-                                        // ICONO CON BORDES REDONDEADOS DIRECTO SOBRE LA BARRA
+                                        // ICONO EN LA BARRA SIN FONDO BLANCO
                                         Image(
                                             painter = painterResource(id = R.drawable.icon),
                                             contentDescription = "Logo",
                                             modifier = Modifier
                                                 .height(45.dp)
-                                                .clip(RoundedCornerShape(8.dp)), // Redondeado sutil
+                                                .clip(RoundedCornerShape(8.dp)),
                                             contentScale = ContentScale.Fit
                                         )
                                     },
@@ -178,7 +178,7 @@ fun DrawerContent(
     var divisionesExpandidas by remember { mutableStateOf(false) }
 
     Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
-        // ICONO EN EL MENÚ SIN RECUADRO BLANCO PERO CON BORDES REDONDEADOS
+        // ICONO EN EL MENÚ SIN FONDO BLANCO
         Box(
             modifier = Modifier
                 .fillMaxWidth()

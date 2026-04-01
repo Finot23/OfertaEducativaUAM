@@ -8,13 +8,13 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -40,7 +40,7 @@ fun LicenciaturasListScreen(
             .verticalScroll(scrollState)
             .background(MaterialTheme.colorScheme.background)
     ) {
-        // 1. ENCABEZADO DE DIVISIÓN (Color Sólido adaptable)
+        // 1. ENCABEZADO DE DIVISIÓN
         Box(
             modifier = Modifier
                 .fillMaxWidth()
@@ -51,14 +51,14 @@ fun LicenciaturasListScreen(
                 Text(
                     text = "DIVISIÓN ${division?.siglas}",
                     style = MaterialTheme.typography.headlineMedium,
-                    color = MaterialTheme.colorScheme.onPrimary, // ADAPTABLE
+                    color = MaterialTheme.colorScheme.onPrimary,
                     fontWeight = FontWeight.Black,
                     fontSize = 28.sp * accessibilityState.textScale
                 )
                 Text(
                     text = division?.nombreCompleto?.uppercase() ?: "",
                     style = MaterialTheme.typography.titleSmall,
-                    color = MaterialTheme.colorScheme.onPrimary.copy(alpha = 0.9f), // ADAPTABLE
+                    color = MaterialTheme.colorScheme.onPrimary.copy(alpha = 0.9f),
                     fontWeight = FontWeight.Bold,
                     fontSize = 14.sp * accessibilityState.textScale,
                     letterSpacing = 1.sp
@@ -87,7 +87,7 @@ fun LicenciaturasListScreen(
                 text = if (division != null) stringResource(id = division.descripcion) else "",
                 style = MaterialTheme.typography.bodyLarge,
                 fontSize = 16.sp * accessibilityState.textScale,
-                lineHeight = (22 + accessibilityState.lineSpacingExtra).sp // Espaciado aplicado
+                lineHeight = (22 + accessibilityState.lineSpacingExtra).sp
             )
             
             Spacer(modifier = Modifier.height(24.dp))
@@ -104,6 +104,7 @@ fun LicenciaturasListScreen(
             licenciaturas.forEach { licenciatura ->
                 CarreraButton(
                     nombre = licenciatura.nombre,
+                    icon = licenciatura.icon,
                     accessibilityState = accessibilityState,
                     onClick = { onLicenciaturaSelected(licenciatura.id) }
                 )
@@ -116,6 +117,7 @@ fun LicenciaturasListScreen(
 @Composable
 fun CarreraButton(
     nombre: String,
+    icon: Int, // Cambiado de ImageVector a Int
     accessibilityState: AccessibilityState,
     onClick: () -> Unit
 ) {
@@ -136,7 +138,7 @@ fun CarreraButton(
         ) {
             Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.weight(1f)) {
                 Icon(
-                    imageVector = Icons.AutoMirrored.Filled.List, 
+                    painter = painterResource(id = icon),
                     contentDescription = null,
                     modifier = Modifier.size(24.dp),
                     tint = MaterialTheme.colorScheme.primary

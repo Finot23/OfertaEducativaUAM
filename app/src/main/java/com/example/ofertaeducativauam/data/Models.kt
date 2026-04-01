@@ -12,6 +12,7 @@ data class Licenciatura(
     val perfilIngreso: Int,  // ID de recurso R.string
     val planEstudios: Int,   // ID de recurso R.string
     val campoLaboral: Int,   // ID de recurso R.string
+    val icon: Int,           // ID de recurso R.drawable (Cambiado de ImageVector)
     val imagenes: List<Int> = emptyList(),
     val imagenPlanEstudios: Int? = null,
     val imagenCampoLaboral: Int? = null
