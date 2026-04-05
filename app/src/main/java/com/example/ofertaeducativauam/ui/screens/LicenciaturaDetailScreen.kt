@@ -52,7 +52,7 @@ fun LicenciaturaDetailScreen(
                 .verticalScroll(scrollState)
                 .then(if (imagenZoom != null) Modifier.blur(10.dp) else Modifier)
         ) {
-            // 1. ENCABEZADO DINÁMICO (Soporta Contraste Alto)
+            // envabezado
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -79,7 +79,7 @@ fun LicenciaturaDetailScreen(
             }
 
             Column(modifier = Modifier.padding(16.dp)) {
-                // 2. VIDA ACADÉMICA
+
                 Text(
                     text = "VIDA ACADÉMICA",
                     style = MaterialTheme.typography.titleLarge,
@@ -93,7 +93,7 @@ fun LicenciaturaDetailScreen(
                 
                 Spacer(modifier = Modifier.height(32.dp))
 
-                // 3. INFORMACIÓN DE LA CARRERA
+                // INFORMACIÓN DE LA CARRERA
                 Text(
                     text = "INFORMACIÓN DE LA CARRERA",
                     style = MaterialTheme.typography.titleLarge,
@@ -146,7 +146,7 @@ fun LicenciaturaDetailScreen(
             }
         }
 
-        // DIALOG ZOOM
+        // fotos zoom
         imagenZoom?.let { resId ->
             Dialog(
                 onDismissRequest = { imagenZoom = null },

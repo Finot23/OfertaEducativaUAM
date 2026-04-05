@@ -38,7 +38,7 @@ fun AccessibilityScreen(viewModel: AccessibilityViewModel) {
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        // 1. TAMAÑO DE FUENTE
+        // TAMAÑO DE FUENTE
         AccessibilitySection(titulo = "Tamaño de fuente", textScale = state.textScale) {
             Slider(
                 value = state.textScale,
@@ -52,7 +52,7 @@ fun AccessibilityScreen(viewModel: AccessibilityViewModel) {
             )
         }
 
-        // 2. ESPACIADO DE LÍNEA
+        // ESPACIADO DE LÍNEA
         AccessibilitySection(titulo = "Espaciado de línea", textScale = state.textScale) {
             Slider(
                 value = state.lineSpacingExtra,
@@ -66,7 +66,7 @@ fun AccessibilityScreen(viewModel: AccessibilityViewModel) {
             )
         }
 
-        // 3. VISUALIZACIÓN (Modo Oscuro y Contraste Alto)
+        // Modo Oscuro y Contraste Alto
         AccessibilitySection(titulo = "Visualización", textScale = state.textScale) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -87,7 +87,7 @@ fun AccessibilityScreen(viewModel: AccessibilityViewModel) {
             }
         }
 
-        // 4. FILTROS DE DALTONISMO
+        // FILTROS DE DALTONISMO
         AccessibilitySection(titulo = "Filtros de color (Daltonismo)", textScale = state.textScale) {
             ColorFilterType.entries.forEach { filter ->
                 Row(

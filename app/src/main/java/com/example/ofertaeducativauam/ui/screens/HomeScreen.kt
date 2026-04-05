@@ -44,7 +44,7 @@ fun HomeScreen(
                 .verticalScroll(scrollState)
                 .then(if (imagenZoom != null) Modifier.blur(10.dp) else Modifier)
         ) {
-            // Imagen principal de la Unidad
+            // primera imagen
             Box(modifier = Modifier.fillMaxWidth().height(250.dp)) {
                 Image(
                     painter = painterResource(id = R.drawable.home_uam),
@@ -102,7 +102,7 @@ fun HomeScreen(
                 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                // Nuevo bloque de texto
+                // datos
                 Text(
                     text = "Compromiso con el Futuro",
                     style = MaterialTheme.typography.headlineSmall,
@@ -119,7 +119,7 @@ fun HomeScreen(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // Segundo Carrusel (home_4, home_5)
+                // carrusel 2
                 HomeCarousel(
                     imagenes = listOf(R.drawable.home_4, R.drawable.home_5),
                     onImagenClick = { imagenZoom = it }
@@ -129,7 +129,7 @@ fun HomeScreen(
             }
         }
 
-        // Dialog de Zoom (Reutilizado del detalle)
+        // zoom a las imagenes
         imagenZoom?.let { resId ->
             Dialog(
                 onDismissRequest = { imagenZoom = null },
@@ -184,7 +184,7 @@ fun HomeCarousel(imagenes: List<Int>, onImagenClick: (Int) -> Unit) {
         
         Spacer(modifier = Modifier.height(8.dp))
 
-        // Puntos indicadores
+        // indicadores fotos
         Row {
             repeat(imagenes.size) { iteration ->
                 val color = if (pagerState.currentPage == iteration) MaterialTheme.colorScheme.primary else Color.LightGray

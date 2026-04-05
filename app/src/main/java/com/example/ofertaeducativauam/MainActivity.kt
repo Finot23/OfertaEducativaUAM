@@ -59,22 +59,22 @@ class MainActivity : ComponentActivity() {
                 val matrixValues = remember(accessibilityState.colorFilter) {
                     when (accessibilityState.colorFilter) {
                         ColorFilterType.PROTANOPIA -> floatArrayOf(
-                            1f, 0f, 0f, 0f, 0f,
-                            0.7f, 1f, 0f, 0f, 0f,
-                            0.7f, 0f, 1f, 0f, 0f,
-                            0f, 0f, 0f, 1f, 0f
+                            0.567f, 0.433f, 0.000f, 0.000f, 0.000f,
+                            0.558f, 0.442f, 0.000f, 0.000f, 0.000f,
+                            0.000f, 0.242f, 0.758f, 0.000f, 0.000f,
+                            0.000f, 0.000f, 0.000f, 1.000f, 0.000f
                         )
                         ColorFilterType.DEUTERANOPIA -> floatArrayOf(
-                            1f, 0.7f, 0f, 0f, 0f,
-                            0f, 1f, 0f, 0f, 0f,
-                            0f, 0.7f, 1f, 0f, 0f,
-                            0f, 0f, 0f, 1f, 0f
+                            0.625f, 0.375f, 0.000f, 0.000f, 0.000f,
+                            0.700f, 0.300f, 0.000f, 0.000f, 0.000f,
+                            0.000f, 0.300f, 0.700f, 0.000f, 0.000f,
+                            0.000f, 0.000f, 0.000f, 1.000f, 0.000f
                         )
                         ColorFilterType.TRITANOPIA -> floatArrayOf(
-                            1f, 0f, 0.7f, 0f, 0f,
-                            0f, 1f, 0.7f, 0f, 0f,
-                            0f, 0f, 1f, 0f, 0f,
-                            0f, 0f, 0f, 1f, 0f
+                            0.950f, 0.050f, 0.000f, 0.000f, 0.000f,
+                            0.000f, 0.433f, 0.567f, 0.000f, 0.000f,
+                            0.000f, 0.475f, 0.525f, 0.000f, 0.000f,
+                            0.000f, 0.000f, 0.000f, 1.000f, 0.000f
                         )
                         else -> floatArrayOf(
                             1f, 0f, 0f, 0f, 0f,

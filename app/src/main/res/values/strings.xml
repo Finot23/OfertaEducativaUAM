@@ -18,7 +18,7 @@
     <string name="contacto_x">uamcuajimalpa</string>
     <string name="contacto_fb">UAMUnidadCuajimalpa</string>
 
-    <!-- LTSI: Tecnologías y Sistemas de Información -->
+    <!-- LTSI -->
     <string name="ltsi_info_gral">Nuestro programa de Licenciatura en Tecnologías y Sistemas de Información ofrece una formación sólida y completa en las áreas clave de la informática, la tecnología y la gestión de la información. En nuestra universidad, contarás con un plan de estudios actualizado y con un equipo docente altamente calificado y comprometido con tu formación académica y profesional.</string>
     <string name="ltsi_perfil">El licenciado en Tecnologías y Sistemas de Información es un profesional que ejerce el pensamiento computacional en las diversas esferas de la sociedad informatizada, ya sea en el análisis de problemas multi o interdisciplinarios o de su quehacer disciplinario en el diseño, implementación, y aseguramiento de la calidad del software que resuelve problemas del mundo contemporáneo.\n\nEstá habilitado, en particular, para desarrollar, adaptar y aplicar sistemas que inciden en la calidad de vida, tales como las industrias culturales (tv, radio, cine, museos, educación, editoriales, y otros medios digitales) y los sistemas para la interacción humana mediada por la tecnología (diseño de información, multimedia, diseño de interfaces, videojuegos, y otros elementos de los ambientes virtuales). Debido a su amplia formación, el egresado de la LTSI estará preparado también para realizar estudios de posgrado en disciplinas afines a su preparación o generar proyectos emprendedores en beneficio de la sociedad.</string>
     <string name="ltsi_plan">El plan de estudios es amplio y flexible, diseñado para cubrir desde algoritmos básicos hasta arquitectura de sistemas complejos. Haz clic en la imagen de abajo para ver la tira de materias detallada.</string>
@@ -74,7 +74,7 @@
     <string name="lma_plan">El currículo incluye bases sólidas de álgebra y cálculo, avanzando hacia la estadística, procesos estocásticos, análisis numérico y programación científica. El estudiante aprende a utilizar software especializado para el manejo de grandes volúmenes de datos (Big Data) y la creación de simulaciones matemáticas aplicadas a diversas disciplinas.</string>
     <string name="lma_campo">¿Dónde trabaja un Matemático Aplicado?\n\n• Sector financiero y bancario en la evaluación de riesgos y diseño de algoritmos de inversión.\n• Empresas de tecnología en roles de Científico de Datos (Data Scientist) y aprendizaje automático (Machine Learning).\n• Consultorías de logística y optimización de procesos industriales.\n• Centros de investigación interdisciplinaria y departamentos de planeación gubernamental.</string>
 
-    <!-- Placeholders para otras carreras -->
+    <!-- genericos -->
     <string name="generic_info">Próximamente más información detallada sobre esta licenciatura...</string>
     <string name="generic_perfil">Perfil de ingreso en proceso de actualización.</string>
     <string name="generic_plan">Plan de estudios disponible en la unidad académica.</string>

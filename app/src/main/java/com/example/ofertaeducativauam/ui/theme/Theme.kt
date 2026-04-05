@@ -63,7 +63,7 @@ fun OfertaEducativaUAMTheme(
         else -> LightColorScheme
     }
 
-    // Aplicar espaciado dinámico a los estilos principales
+    // Aplicar espaciado dinámico
     val dynamicTypography = Typography.copy(
         bodyLarge = Typography.bodyLarge.copy(lineHeight = (Typography.bodyLarge.lineHeight.value + lineSpacingExtra).sp),
         bodyMedium = Typography.bodyMedium.copy(lineHeight = (Typography.bodyMedium.lineHeight.value + lineSpacingExtra).sp),

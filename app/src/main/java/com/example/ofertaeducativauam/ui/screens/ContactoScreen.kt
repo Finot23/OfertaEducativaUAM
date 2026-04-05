@@ -67,7 +67,7 @@ fun ContactoScreen(accessibilityState: AccessibilityState) {
                 .verticalScroll(scrollState)
                 .padding(padding)
         ) {
-            // 1. ENCABEZADO UNIFICADO
+            //ENCABEZADO
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -87,7 +87,7 @@ fun ContactoScreen(accessibilityState: AccessibilityState) {
 
             Column(modifier = Modifier.padding(16.dp)) {
                 
-                // 2. UBICACIÓN Y MAPA
+                //UBICACIÓN Y MAPA
                 Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(16.dp)) {
                     Column(modifier = Modifier.padding(16.dp)) {
                         Row(verticalAlignment = Alignment.CenterVertically) {
@@ -120,7 +120,7 @@ fun ContactoScreen(accessibilityState: AccessibilityState) {
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // 3. TELÉFONO Y HORARIO
+                //TELÉFONO Y HORARIO
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.2f)),
@@ -152,7 +152,7 @@ fun ContactoScreen(accessibilityState: AccessibilityState) {
 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                // 4. FORMULARIO ACORDEÓN
+                // FORMULARIO
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(12.dp),
@@ -241,7 +241,7 @@ fun ContactoScreen(accessibilityState: AccessibilityState) {
 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                // 5. REDES SOCIALES
+                // redes
                 Text(text = "REDES SOCIALES", fontWeight = FontWeight.Bold, fontSize = 18.sp * accessibilityState.textScale)
                 Spacer(modifier = Modifier.height(12.dp))
                 Column(modifier = Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(8.dp)) {

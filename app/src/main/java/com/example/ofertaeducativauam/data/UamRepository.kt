@@ -6,7 +6,7 @@ import com.example.ofertaeducativauam.R
 
 object UamRepository {
     val licenciaturas = listOf(
-        // --- CCD ---
+        //CCD
         Licenciatura(
             id = "LTSI", nombre = "Tecnologías y Sistemas de Información", division = Division.CCD,
             infoGeneral = R.string.ltsi_info_gral, perfilIngreso = R.string.ltsi_perfil,
@@ -32,7 +32,7 @@ object UamRepository {
             imagenPlanEstudios = R.drawable.cc_plan, imagenCampoLaboral = R.drawable.cc_4
         ),
 
-        // --- CSH ---
+        //  CSH
         Licenciatura(
             id = "LADM", nombre = "Administración", division = Division.CSH,
             infoGeneral = R.string.ladm_info_gral, perfilIngreso = R.string.ladm_perfil,
@@ -66,7 +66,7 @@ object UamRepository {
             imagenPlanEstudios = R.drawable.hu_plan, imagenCampoLaboral = R.drawable.hu_4
         ),
 
-        // --- CNI ---
+        //CNI
         Licenciatura(
             id = "LIA", nombre = "Ingeniería Biológica", division = Division.CNI,
             infoGeneral = R.string.lia_info_gral, perfilIngreso = R.string.lia_perfil,

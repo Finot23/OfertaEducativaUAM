@@ -34,7 +34,7 @@ fun DivisionesScreen(
             .verticalScroll(scrollState)
             .background(MaterialTheme.colorScheme.background)
     ) {
-        // 1. ENCABEZADO UNIFICADO (Mismo estilo que Licenciaturas y Detalles)
+        //ENCABEZADO
         Box(
             modifier = Modifier
                 .fillMaxWidth()
@@ -52,7 +52,7 @@ fun DivisionesScreen(
             )
         }
 
-        // 2. CONTENIDO CON PADDING
+        //padding
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
                 text = "UAM Cuajimalpa ofrece una oferta educativa de vanguardia dividida en tres grandes áreas del conocimiento. Elige tu camino de aprendizaje:",
@@ -64,7 +64,7 @@ fun DivisionesScreen(
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            // Cartas de divisiones
+            // cards divs
             divisiones.forEach { division ->
                 DivisionCard(
                     division = division,

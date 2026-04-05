@@ -40,7 +40,7 @@ fun LicenciaturasListScreen(
             .verticalScroll(scrollState)
             .background(MaterialTheme.colorScheme.background)
     ) {
-        // 1. ENCABEZADO DE DIVISIÓN
+        //ENCABEZADO
         Box(
             modifier = Modifier
                 .fillMaxWidth()
@@ -66,14 +66,14 @@ fun LicenciaturasListScreen(
             }
         }
 
-        // 2. CARRUSEL DE IMÁGENES
+        // CARRUSEL
         if (division != null && division.imagenes.isNotEmpty()) {
             Box(modifier = Modifier.padding(bottom = 8.dp)) {
                 CarruselFotos(imagenes = division.imagenes)
             }
         }
 
-        // 3. SECCIÓN SOBRE LA DIVISIÓN
+        // SOBRE LA DIVISIÓN
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
                 text = "SOBRE LA DIVISIÓN",
@@ -92,7 +92,7 @@ fun LicenciaturasListScreen(
             
             Spacer(modifier = Modifier.height(24.dp))
 
-            // 4. CARRERAS DISPONIBLES
+            //CARRERAS DISPONIBLES
             Text(
                 text = "CARRERAS DISPONIBLES",
                 style = MaterialTheme.typography.titleLarge,

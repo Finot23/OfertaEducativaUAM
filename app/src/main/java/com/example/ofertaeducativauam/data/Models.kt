@@ -1,18 +1,19 @@
 package com.example.ofertaeducativauam.data
 
+import androidx.compose.ui.graphics.vector.ImageVector
 import com.example.ofertaeducativauam.R
 
 data class Licenciatura(
     val id: String,
     val nombre: String,
     val division: Division,
-    val duracion: String = "12 trimestres (4 años)",
+    val duracion: String = "12 trimestres",
     val modalidad: String = "Presencial",
-    val infoGeneral: Int,    // ID de recurso R.string
-    val perfilIngreso: Int,  // ID de recurso R.string
-    val planEstudios: Int,   // ID de recurso R.string
-    val campoLaboral: Int,   // ID de recurso R.string
-    val icon: Int,           // ID de recurso R.drawable (Cambiado de ImageVector)
+    val infoGeneral: Int,    
+    val perfilIngreso: Int,  
+    val planEstudios: Int,   
+    val campoLaboral: Int,
+    val icon: Int,        
     val imagenes: List<Int> = emptyList(),
     val imagenPlanEstudios: Int? = null,
     val imagenCampoLaboral: Int? = null
