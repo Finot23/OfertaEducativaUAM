@@ -14,9 +14,9 @@ enum class ColorFilterType(val label: String) {
 
 data class AccessibilityState(
     val textScale: Float = 1.0f,
-    val lineSpacingExtra: Float = 0f, // Recomendación: Espaciado extra
+    val lineSpacingExtra: Float = 0f,
     val isDarkMode: Boolean = false,
-    val isHighContrast: Boolean = false, // Recomendación: Contraste alto
+    val isHighContrast: Boolean = false,
     val colorFilter: ColorFilterType = ColorFilterType.STANDARD
 )
 
